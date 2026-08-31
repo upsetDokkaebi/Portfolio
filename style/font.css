@@ -1,0 +1,53 @@
+@font-face {
+    font-family: qindret;
+    src: url(../fonts/Qindret-OGxxP.otf);
+}
+
+.qindret {
+    font-family: qindret;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+.poppins {
+    font-family: poppins;
+}
+
+@font-face {
+    font-family: jetbrains;
+    src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+
+.jetbrains {
+    font-family: jetbrains;
+}
+
+@font-face {
+    font-family: geist;
+    src: url(../fonts/GeistMono-VariableFont_wght.ttf);
+}
+
+.geist {
+    font-family: geist;
+}
+
+@font-face {
+    font-family: pemage;
+    src: url(../fonts/PemageRegular-YqrdO.otf);
+}
+
+.pemage {
+    font-family: pemage;
+}
+
+@font-face {
+    font-family: impact;
+    src: url(../fonts/impact.ttf);
+}
+
+.impact {
+    font-family: impact;
+}
