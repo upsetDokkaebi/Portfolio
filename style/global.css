@@ -4,12 +4,23 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
     width: 100%;
     height: 100vh;
     font-family: 'Poppins';
     background-color: #f8f9fa;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 nav {
@@ -105,5 +116,91 @@ nav ul .resume-link a:hover {
 
     .resume-link {
         display: flex;
+    }
+}
+
+/* Splash Screen Animation */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    animation: splash-display 2s ease-in-out forwards;
+}
+
+@keyframes splash-display {
+    0% {
+        z-index: 9999;
+        display: flex;
+    } 99% {
+        z-index: 9999;
+        display: flex;
+    } 100% {
+        z-index: -9999;
+        display: none;
+    }
+}
+
+#splash-screen::before {
+    content: 'Portfolio by';
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    backdrop-filter: blur(8px);
+    animation: splash-slide-up 2s ease-in-out forwards;
+}
+
+#splash-screen::after {
+    content: 'Ammaron Oliveros';
+    font-family: qindret;
+    font-size: 2rem;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    backdrop-filter: blur(8px);
+    animation: splash-slide-down 2s ease-in-out forwards;
+}
+
+@keyframes splash-slide-up {
+    0% {
+        transform: translateY(0%);
+        background: #ff8b26;
+    } 50% {
+        transform: translateY(1.5%);
+        background: #ff8b26;
+    } 99.9% {
+        display: flex;
+        transform: translateY(-100%);
+        background: transparent;
+    } 100% {
+        display: none;
+    }
+}
+
+@keyframes splash-slide-down {
+    0% {
+        transform: translateY(0%);
+        background: #ff8b26;
+    } 50% {
+        transform: translateY(-1%);
+        background: #ff8b26;
+    } 99.9% {
+        display: flex;
+        transform: translateY(100%);
+        background: transparent;
+    } 100% {
+        display: none;
     }
 }

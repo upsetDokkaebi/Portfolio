@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div id="splash-screen"></div>
     <nav>
         <div class="logo">
             <div class="sub-title poppins">Portfolio by</div>
@@ -25,7 +26,7 @@
         </ul>
     </nav>
     <section class="hero">
-        <div class="left-panel">
+        <div class="left-panel reveal reveal-delay-1">
             <div class="banner">
                 <div class="banner-img">
                     <div class="banner-logo">
@@ -45,7 +46,7 @@
             </div>
         </div>
 
-        <div class="main-panel">
+        <div class="main-panel reveal">
             <span class="label-fs pemage">FullStack</span>
             <div class="content design">
                 <span class="label-dev pemage">Developer</span>
@@ -59,10 +60,10 @@
     <span class="token property">batch</span>: <span class="token number">2026</span>,
 
     <span class="token property">expertise</span>: [
-        <span class="token string">"Frontend Development"</span>,
-        <span class="token string">"Backend Development"</span>,
-        <span class="token string">"Cybersecurity"</span>,
-        <span class="token string">"Technical Support"</span>
+        <span class="token string">"Web Development"</span>,
+        <span class="token string">"Programming"</span>,
+        <span class="token string">"Technical Support"</span>,
+        <span class="token string">"Cybersecurity"</span>
     ],
 };
                 </code></pre>
@@ -70,7 +71,7 @@
             </div>
         </div>
 
-        <div class="right-panel">
+        <div class="right-panel reveal reveal-delay-2">
             <div class="banner">
                 <div class="banner-text">
                     <span class="pemage">me?</span>
@@ -79,7 +80,7 @@
                 <div class="banner-img1">
                     <div class="banner-img2"></div>
                 </div>
-                <div class="banner-text">
+                <div class="banner-text down">
                     <p>I'm very pleased to join your team. Please hire me :3</p>
                 </div>
             </div>
@@ -87,18 +88,18 @@
     </section>
 
     <section class="about" id="about">
-        <div class="section-heading">
+        <div class="section-heading reveal">
             <p class="eyebrow">About me</p>
             <h2>Creative builder with a strong mix of design thinking and code.</h2>
         </div>
 
         <div class="about-grid">
-            <div class="about-card image-card">
+            <div class="about-card image-card reveal reveal-delay-1">
                 <img src="img/gojo.jpg" alt="Temporary profile portrait">
                 <div class="floating-tag">Available for work</div>
             </div>
 
-            <div class="about-card text-card">
+            <div class="about-card text-card reveal reveal-delay-2">
                 <p>
                     I’m a full-stack developer who enjoys turning complex ideas into clean, useful experiences.
                     My work blends frontend polish, backend reliability, and thoughtful problem-solving to build
@@ -126,20 +127,22 @@
     </section>
 
     <section class="projects" id="projects">
-        <div class="section-heading">
+        <div class="section-heading reveal">
             <p class="eyebrow">Projects</p>
             <h2>Selected work that balances aesthetic detail and real-world functionality.</h2>
         </div>
 
         <div class="project-grid">
-            <article class="project-card">
+            <article class="project-card reveal reveal-delay-1">
                 <div class="project-thumb">
                     <img src="img/gojo.jpg" alt="Projects preview 1">
                 </div>
                 <div class="project-body">
-                    <div class="meta">UI/UX • Web App</div>
-                    <h3>Portfolio Studio</h3>
-                    <p>A sleek personal portfolio experience built for storytelling, brand clarity, and conversion.</p>
+                    <div class="project-copy">
+                        <div class="meta">UI/UX • Web App</div>
+                        <h3>Portfolio Studio</h3>
+                        <p>A sleek personal portfolio experience built for storytelling, brand clarity, and conversion.</p>
+                    </div>
                     <ul class="tag-list">
                         <li>HTML</li>
                         <li>CSS</li>
@@ -148,14 +151,16 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal reveal-delay-2">
                 <div class="project-thumb">
                     <img src="img/gojo.jpg" alt="Projects preview 2">
                 </div>
                 <div class="project-body">
-                    <div class="meta">Backend • Dashboard</div>
-                    <h3>Ops Control Panel</h3>
-                    <p>An operational dashboard for monitoring service flow, task status, and team productivity.</p>
+                    <div class="project-copy">
+                        <div class="meta">Backend • Dashboard</div>
+                        <h3>Ops Control Panel</h3>
+                        <p>An operational dashboard for monitoring service flow, task status, and team productivity.</p>
+                    </div>
                     <ul class="tag-list">
                         <li>Node</li>
                         <li>API</li>
@@ -164,14 +169,16 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal reveal-delay-3">
                 <div class="project-thumb">
                     <img src="img/gojo.jpg" alt="Projects preview 3">
                 </div>
                 <div class="project-body">
-                    <div class="meta">Product • Security</div>
-                    <h3>Secure Access Portal</h3>
-                    <p>A streamlined login and access system designed to improve trust, visibility, and user flow.</p>
+                    <div class="project-copy">
+                        <div class="meta">Product • Security</div>
+                        <h3>Secure Access Portal</h3>
+                        <p>A streamlined login and access system designed to improve trust, visibility, and user flow.</p>
+                    </div>
                     <ul class="tag-list">
                         <li>Security</li>
                         <li>UX</li>
@@ -183,7 +190,7 @@
     </section>
 
     <section class="contact" id="contact">
-        <div class="contact-card">
+        <div class="contact-card reveal">
             <div class="contact-copy">
                 <p class="eyebrow">Contact</p>
                 <h2>Let’s build something meaningful.</h2>
@@ -205,7 +212,7 @@
         </div>
     </section>
 
-    <footer class="site-footer">
+    <footer class="site-footer reveal">
         <p>© 2026 Ammaron O. All rights reserved.</p>
         <nav class="footer-nav" aria-label="Footer navigation">
             <a href="#about">About</a>
@@ -215,5 +222,7 @@
     </footer>
 
 </body>
+
+<script src="scripts/index.js"></script>
 
 </html>
