@@ -18,9 +18,25 @@ body {
     width: 100%;
     height: 100vh;
     font-family: 'Poppins';
-    background-color: #f8f9fa;
+    position: relative;
+    isolation: isolate;
+    background-color: #f9fafb;
     overflow: scroll;
     overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        linear-gradient(to right, rgba(209, 213, 219, 0.72) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(209, 213, 219, 0.72) 1px, transparent 1px);
+    background-size: 32px 32px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%);
+    mask-image: radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%);
 }
 
 nav {

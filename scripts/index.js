@@ -1,5 +1,13 @@
 document.documentElement.classList.add('js');
 
+const splashScreen = document.querySelector('#splash-screen');
+
+splashScreen?.addEventListener('animationend', (event) => {
+	if (event.animationName === 'splash-display') {
+		splashScreen.remove();
+	}
+}, { once: true });
+
 const revealItems = document.querySelectorAll('.reveal');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const time_delay = 1900;
