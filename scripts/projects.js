@@ -39,4 +39,14 @@ export const projects = [
 		github: 'https://github.com/upsetDokkaebi/cmu-lms-web-design',
 		liveDemo: 'https://cmu-lms-static.vercel.app/',
 	},
+	{
+		image: 'assets/queuing-preview.png',
+		imageAlt: 'Queuing Project Preview',
+		category: 'Product • Backend',
+		title: 'Service Queuing System',
+		description: 'A web-based queue management system that allows users to take queue numbers, monitor their position, and helps staff manage and process customers in an organized manner.',
+		tags: ['HTML', 'CSS', 'JS'],
+		github: 'https://github.com/upsetDokkaebi/queuing-system',
+		liveDemo: 'https://public-queuing-system.vercel.app/display.html',
+	},
 ];
