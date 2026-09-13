@@ -1,4 +1,56 @@
+import { projects } from './projects.js';
+
 document.documentElement.classList.add('js');
+
+const projectGrid = document.querySelector('.project-grid');
+
+const createProjectCard = (project, index) => {
+	const card = document.createElement('article');
+	card.className = `project-card reveal reveal-delay-${index + 1}`;
+
+	const thumbnail = document.createElement('div');
+	thumbnail.className = 'project-thumb';
+
+	const image = document.createElement('img');
+	image.src = project.image;
+	image.alt = project.imageAlt;
+
+	const number = document.createElement('span');
+	number.className = 'project-number';
+	number.textContent = String(index + 1).padStart(2, '0');
+	thumbnail.append(image, number);
+
+	const body = document.createElement('div');
+	body.className = 'project-body';
+
+	const copy = document.createElement('div');
+	copy.className = 'project-copy';
+
+	const category = document.createElement('div');
+	category.className = 'meta';
+	category.textContent = project.category;
+
+	const title = document.createElement('h3');
+	title.textContent = project.title;
+
+	const description = document.createElement('p');
+	description.textContent = project.description;
+	copy.append(category, title, description);
+
+	const tags = document.createElement('ul');
+	tags.className = 'tag-list';
+	project.tags.forEach((tag) => {
+		const tagItem = document.createElement('li');
+		tagItem.textContent = tag;
+		tags.append(tagItem);
+	});
+
+	body.append(copy, tags);
+	card.append(thumbnail, body);
+	return card;
+};
+
+projectGrid?.replaceChildren(...projects.map(createProjectCard));
 
 const splashScreen = document.querySelector('#splash-screen');
 
