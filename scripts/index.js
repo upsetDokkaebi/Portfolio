@@ -15,10 +15,13 @@ const createProjectCard = (project, index) => {
 	image.src = project.image;
 	image.alt = project.imageAlt;
 
+    const border = document.createElement('div');
+	border.className = 'project-number-border';
+
 	const number = document.createElement('span');
 	number.className = 'project-number';
-	number.textContent = String(index + 1).padStart(2, '0');
-	thumbnail.append(image, number);
+	number.textContent = String(index + 1).padStart(10, 'Project 0');
+	thumbnail.append(image, border, number);
 
 	const body = document.createElement('div');
 	body.className = 'project-body';
@@ -48,12 +51,13 @@ const createProjectCard = (project, index) => {
 	const projectLinks = document.createElement('div');
 	projectLinks.className = 'project-links';
 
-	const addProjectLink = (url, label) => {
+	const addProjectLink = (url, label, variant) => {
 		if (!url) {
 			return;
 		}
 
 		const link = document.createElement('a');
+		link.className = `project-link project-link--${variant}`;
 		link.href = url;
 		link.target = '_blank';
 		link.rel = 'noreferrer';
@@ -61,8 +65,8 @@ const createProjectCard = (project, index) => {
 		projectLinks.append(link);
 	};
 
-	addProjectLink(project.github, 'GitHub');
-	addProjectLink(project.liveDemo, 'Live demo');
+	addProjectLink(project.github, 'GitHub', 'github');
+	addProjectLink(project.liveDemo, 'Live demo', 'demo');
 
 	body.append(copy, tags, projectLinks);
 	card.append(thumbnail, body);
