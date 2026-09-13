@@ -45,7 +45,26 @@ const createProjectCard = (project, index) => {
 		tags.append(tagItem);
 	});
 
-	body.append(copy, tags);
+	const projectLinks = document.createElement('div');
+	projectLinks.className = 'project-links';
+
+	const addProjectLink = (url, label) => {
+		if (!url) {
+			return;
+		}
+
+		const link = document.createElement('a');
+		link.href = url;
+		link.target = '_blank';
+		link.rel = 'noreferrer';
+		link.textContent = label;
+		projectLinks.append(link);
+	};
+
+	addProjectLink(project.github, 'GitHub');
+	addProjectLink(project.liveDemo, 'Live demo');
+
+	body.append(copy, tags, projectLinks);
 	card.append(thumbnail, body);
 	return card;
 };

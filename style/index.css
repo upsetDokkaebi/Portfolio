@@ -819,6 +819,31 @@ main {
     font-weight: 600;
 }
 
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.project-links:empty {
+    display: none;
+}
+
+.project-links a {
+    color: #111;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid #ff7900;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-links a:hover {
+    color: #d76d00;
+    border-color: #111;
+}
+
 .contact-card {
     display: grid;
     grid-template-columns: 1.4fr 0.9fr;
