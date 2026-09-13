@@ -1,4 +1,4 @@
-# Ammaron O. Portfolio
+# My Personal Portfolio
 ![preview](assets/portfolio-preview.png)
 
 Personal portfolio website for Ammaron Oliveros, a creative full-stack junior developer with a strong mix of design thinking and code.
