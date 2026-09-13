@@ -688,21 +688,19 @@ main {
     border-radius: 4px 30px 4px 4px;
 }
 
-.project-card:nth-child(3n + 1) {
+.project-card:nth-child(1),
+.project-card:nth-child(4),
+.project-card:nth-child(5) {
     grid-column: span 8;
     border-top-color: #ff7900;
     border-right-color: #ff7900;
 }
 
 .project-thumb {
-    height: 240px;
+    height: 300px;
     overflow: hidden;
     margin: 10px;
     border-radius: 20px;
-}
-
-.project-card:nth-child(3n + 1) .project-thumb {
-    height: 300px;
 }
 
 .project-number {
@@ -1074,7 +1072,9 @@ main {
     }
 
     .project-card,
-    .project-card:nth-child(3n + 1) {
+    .project-card:nth-child(1),
+    .project-card:nth-child(4),
+    .project-card:nth-child(5) {
         grid-column: auto;
     }
 
