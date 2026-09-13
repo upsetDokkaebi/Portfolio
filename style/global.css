@@ -101,6 +101,32 @@ nav ul .resume-link a:hover {
     color: white;
 }
 
+    @media (max-width: 700px) {
+        nav {
+            height: auto;
+            flex-direction: column;
+            gap: 18px;
+            padding: 18px 16px 0;
+        }
+
+        .logo {
+            transform: none;
+            scale: 0.8;
+        }
+
+        nav ul {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 14px;
+            font-size: 0.85rem;
+        }
+
+        .resume-link a {
+            padding: 8px 14px;
+        }
+    }
+
 @media (max-width: 1520px) {
     .logo {
         scale: 0.9;
@@ -114,7 +140,7 @@ nav ul .resume-link a:hover {
 @media (max-width: 400px) {
     .logo {
         scale: 0.6;
-        transform: translateY(0px);
+        transform: translateY(10px);
     }
 
     nav {
@@ -123,8 +149,9 @@ nav ul .resume-link a:hover {
     }
 
     nav ul {
-        scale: 0.7;
+        scale: 0.8;
         width: 100%;
+        margin-top: -10px;
         display: flex;
         align-items: center;
         justify-content: center;

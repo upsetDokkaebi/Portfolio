@@ -285,42 +285,6 @@ main {
     }
 }
 
-@media (max-width: 1090px) {
-    .banner {
-        scale: 0.8;
-    }
-
-    .main-panel {
-        scale: 0.95;
-    }
-
-    .banner .see-more {
-        display: none;
-    }
-
-    .main-panel .label-fs,
-    .label-dev,
-    .label-dev2 {
-        font-size: 13rem;
-    }
-
-    .main-panel .content {
-        top: 190px;
-    }
-}
-
-@media (max-width: 860px) {
-    .main-panel .label-fs,
-    .label-dev,
-    .label-dev2 {
-        font-size: 11rem;
-    }
-
-    .main-panel .content {
-        top: 160px;
-    }
-}
-
 .about,
 .projects,
 .contact {
@@ -1013,6 +977,28 @@ main {
 }
 
 @media (max-width: 1090px) {
+    .banner {
+        scale: 0.8;
+    }
+
+    .main-panel {
+        scale: 0.95;
+    }
+
+    .banner .see-more {
+        display: none;
+    }
+
+    .main-panel .label-fs,
+    .label-dev,
+    .label-dev2 {
+        font-size: 13rem;
+    }
+
+    .main-panel .content {
+        top: 190px;
+    }
+
     .about-grid,
     .contact-card {
         grid-template-columns: 1fr;
@@ -1029,49 +1015,17 @@ main {
     .project-card {
         grid-column: span 1;
     }
-
 }
 
-@media (max-width: 700px) {
-    .about,
-    .projects,
-    .contact {
-        padding-top: 80px;
+@media (max-width: 860px) {
+    .main-panel .label-fs,
+    .label-dev,
+    .label-dev2 {
+        font-size: 11rem;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .site-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-@media (max-width: 400px) {
-    .hero {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1.5fr 1fr 1fr;
-        height: max-content;
-        padding-top: 10%;
-    }
-
-    .hero .main-panel {
-        order: 1;
-    }
-
-    .hero .left-panel {
-        order: 2;
-    }
-
-    .text-card,
-    .contact-card {
-        padding: 24px 18px;
-    }
-
-    .section-heading h2 {
-        font-size: 2.2rem;
+    .main-panel .content {
+        top: 160px;
     }
 }
 
@@ -1113,6 +1067,15 @@ main {
 
     .contact-card {
         grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card,
+    .project-card:nth-child(3n + 1) {
+        grid-column: auto;
     }
 
     .tech-list {
@@ -1204,6 +1167,15 @@ main {
 }
 
 @media (max-width: 420px) {
+    .text-card,
+    .contact-card {
+        padding: 24px 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 2.2rem;
+    }
+
     .eyebrow {
         letter-spacing: 0.08rem;
         font-size: 2.8rem;
@@ -1228,6 +1200,151 @@ main {
     .social-row a {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .about,
+    .projects,
+    .contact {
+        padding-top: 80px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        height: auto;
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 16px 0;
+    }
+
+    .logo {
+        transform: none;
+        scale: 0.8;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .resume-link a {
+        padding: 8px 14px;
+    }
+
+    .hero {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 64px 12px 0;
+    }
+
+    .hero > div {
+        width: 100%;
+        min-width: 0;
+        scale: none;
+    }
+
+    .hero .main-panel {
+        order: 1;
+        min-height: 70vh;
+    }
+
+    .hero .left-panel {
+        order: 2;
+    }
+
+    .hero .right-panel {
+        order: 3;
+    }
+
+    .main-panel .label-fs,
+    .main-panel .label-dev,
+    .main-panel .label-dev2 {
+        font-size: 10.5rem;
+        line-height: 1;
+    }
+
+    .main-panel .label-fs {
+        top: 0;
+        left: 4px;
+    }
+
+    .main-panel .label-dev,
+    .main-panel .label-dev2 {
+        right: 0;
+        bottom: -25%;
+    }
+
+    .main-panel .content {
+        width: 100%;
+        height: auto;
+        min-height: 280px;
+        top: 105px;
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .code-block {
+        font-size: 0.75rem;
+        overflow: auto;
+    }
+
+    .left-panel .banner,
+    .right-panel .banner {
+        height: auto;
+        min-height: 390px;
+        transform: none;
+    }
+
+    .banner-img {
+        transform: none;
+        margin: 0 auto 34px;
+    }
+
+    .left-panel .banner-text h1,
+    .right-panel .banner-text span.pemage {
+        font-size: clamp(3.2rem, 15vw, 5rem);
+        line-height: 1;
+    }
+
+    .left-panel .banner-text p,
+    .right-panel .banner-text p {
+        padding: 0 8px;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .banner .see-more {
+        display: none;
+    }
+
+    .right-panel .banner-img1 {
+        margin: 28px auto 72px;
+        transform: rotate(-8deg);
+    }
+
+    .right-panel .banner-img2 {
+        right: -32px;
+        bottom: -54px;
+    }
+
+    .right-panel .banner-text.down {
+        padding: 0 20px;
     }
 }
 
